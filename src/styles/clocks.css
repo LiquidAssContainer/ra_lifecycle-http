@@ -1,0 +1,82 @@
+.clock_list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.clock_container {
+  padding: 10px;
+  position: relative;
+}
+
+.clock_face {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+
+.clock_face::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+}
+
+.clock_hand {
+  width: 0px;
+  height: 50%;
+  border: 1px solid black;
+  transform-origin: bottom center;
+  position: absolute;
+  background-color: #000;
+}
+
+.hour-hand {
+  width: 10px;
+  height: 35%;
+  top: 15%;
+  left: calc(50% - 5px);
+  /* transform: rotate(30deg); */
+  border-radius: 4px;
+}
+
+.minute-hand {
+  width: 4px;
+  height: 50%;
+  left: calc(50% - 2px);
+  /* top: 20%; */
+  /* transform: rotate(60deg); */
+}
+
+.second-hand {
+  width: 2px;
+  height: 50%;
+  left: calc(50% - 1px);
+  /* top: 20%; */
+  /* transform: rotate(90deg); */
+  background-color: grey;
+  border-color: grey;
+}
+
+.clock_title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.clock_remove-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  padding: 0;
+  cursor: pointer;
+}
