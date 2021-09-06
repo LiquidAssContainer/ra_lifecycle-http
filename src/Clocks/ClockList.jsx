@@ -1,11 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Clock = ({ title, id, timezoneOffset, onClockRemove }) => {
-  let interval;
-  const hourHand = useRef(null);
-  const minuteHand = useRef(null);
-  const secondHand = useRef(null);
   const [handDegrees, setHandDegrees] = useState({});
+  let interval;
 
   useEffect(() => {
     interval = setInterval(() => {
@@ -40,17 +37,14 @@ const Clock = ({ title, id, timezoneOffset, onClockRemove }) => {
         <div
           className="clock_hand hour-hand"
           style={{ transform: `rotate(${handDegrees.hours}deg)` }}
-          ref={hourHand}
         ></div>
         <div
           className="clock_hand minute-hand"
           style={{ transform: `rotate(${handDegrees.minutes}deg)` }}
-          ref={minuteHand}
         ></div>
         <div
           className="clock_hand second-hand"
           style={{ transform: `rotate(${handDegrees.seconds}deg)` }}
-          ref={secondHand}
         ></div>
       </div>
     </li>
