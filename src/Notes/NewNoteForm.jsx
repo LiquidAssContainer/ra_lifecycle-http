@@ -24,7 +24,7 @@ export const NewNoteForm = ({ onNoteAdd }) => {
             value={noteText}
             required
           />
-          <button type="submit" className="submit-btn">
+          <button type="submit" className="add-note-btn">
             Добавить
           </button>
         </div>
